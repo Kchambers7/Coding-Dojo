@@ -1,0 +1,35 @@
+.flex-evenly{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+ img {
+    height: 150px;
+   
+}
+
+.blue {
+    background-color: dodgerblue;
+}
+.row {
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.green {
+    background-color: forestgreen;
+}
+
+.flex-around{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.purple {
+    background-color: blueviolet;
+}
