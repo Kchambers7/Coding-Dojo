@@ -40,4 +40,8 @@ lowNum = 2
 highNum = 9
 multi = 3
 
+for i in range(lowNum, highNum + 1)
+    if( % multi == 0):
+        print(i)
+
 
