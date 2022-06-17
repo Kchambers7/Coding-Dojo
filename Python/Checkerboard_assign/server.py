@@ -13,3 +13,11 @@ def changeSquares(rows, columns):
 
 if __name__=="__main__":
     app.run(debug=True)
+
+    
+@app.route('4')
+def 4():
+  return 'change_squares.html' 
+    
+
+
