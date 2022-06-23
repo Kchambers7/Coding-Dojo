@@ -1,29 +1,67 @@
-
-Create a new model (ERD)
-done 
-
-Name the schema dojos_and_ninjas_schema
-done
-
-INSERT INTO dojos (name)
-VALUES('Burbank'), ('San Jose'), ('Online');
-
-
-INSERT to ninjas (first_name, last_name, age, dojo_id)
-VALUES ('Adrian', 'Ramirez', 20, 1), ('Alden', 'Choe', 22, 1), ('KC', 'Chambers', 21, 1);
-
-
-SELECT = FROM ninjas 
-
-Create a table called dojos
-done
-
-Add the following fields to the dojos table: id, name, created_at and updated_at
-
-Create a table called ninjas
-
-Add the following fields to the ninjas table: id, first_name, last_name, age, created_at, updated_at and create an one to many relationship to the dojos table
-
-Change the name of the relationship field to the singular pronoun. ie dojo_id
-
-Take a screen shot of the ERD and upload the .png file
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>index</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Register</h1>
+          {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+    {% if messages %}                            <!-- check if there are any messages -->
+        {% for message in messages %}            <!-- loop through the messages -->
+            <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+          <form action="/register/user" method="post">
+          <div class="form-group">
+            <label for="exampleInputEmail1">First Name</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="first_name">
+          </div>
+          <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Last Name</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="last_name">
+          </div>
+          <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password Confirmation</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="confirmation">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div class="col">
+        <h1>Login</h1>
+        <form action="/login" method="post">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+</body>
+</html>
