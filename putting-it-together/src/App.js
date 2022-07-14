@@ -19,7 +19,7 @@ function App() {
           age={88}
           hairColor="Brown"
         />
-        <MyComponent
+        {/* <MyComponent
           lastName="Fillmore"
           firstName="Millard"
           age={50}
@@ -30,7 +30,7 @@ function App() {
           firstName="Maria"
           age={62}
           hairColor="Brown"
-        />
+        /> */}
       </div>
 
     </div>
